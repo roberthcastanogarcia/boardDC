@@ -1,0 +1,93 @@
+.selected {
+        border: 1px solid tomato;
+}
+
+table {
+  float:right;
+}
+
+.rotate-button {
+  width:50px;
+  height:50px;
+  
+  border: 1px solid black;
+}
+
+draggable {
+  position: absolute;
+}
+
+.die-button {
+  border: 1px solid black;
+  width: 100px;
+  height: 100px;
+  vertical-align: middle;
+  line-height: 100px;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.black-die {
+  background-color: black;
+  color: white;
+}
+
+.white-die {
+}
+
+.white-eight-die {
+  text-align: center;
+  vertical-align: middle;
+  line-height: 100px;
+  display: inline-block;
+}
+
+.black-eight-die {
+  text-align: center;
+  vertical-align: middle;
+  line-height: 100px;
+  display: inline-block;
+  background-color: black;
+  color: white;
+}
+
+.color-die {
+}
+
+.reveal-button {
+  border: 1px solid black;
+  width: 100px;
+  height: 100px;
+  vertical-align: middle;
+  line-height: 100px;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.peek-button {
+  border: 1px solid black;
+  width: 100px;
+  height: 100px;
+  vertical-align: middle;
+  line-height: 100px;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.show-button {
+  border: 1px solid black;
+  width: 100px;
+  height: 100px;
+  vertical-align: middle;
+  line-height: 100px;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.card {
+  
+}

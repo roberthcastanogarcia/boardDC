@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+  
+  <head>
+    <script src="https://cdn.pubnub.com/sdk/javascript/pubnub.4.21.7.js"></script>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/boardDC.css">
+  </head>
+  
+  <body>
+    
+    <!-- ponemos las baldosas -->
+    
+    <!-- 5 baldosas de 7 -->
+    <img src="img/aos/baldosa7.png" id="baldosa7_1" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/baldosa7.png" id="baldosa7_2" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/baldosa7.png" id="baldosa7_3" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/baldosa7.png" id="baldosa7_4" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/baldosa7.png" id="baldosa7_5" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/baldosa7.png" id="baldosa7_6" class="draggable selectable" style="position: absolute;">
+    
+    <!-- 6 baldosas de 5 -->
+    
+    <img src="img/aos/baldosa5.png" id="baldosa5_1" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/baldosa5.png" id="baldosa5_2" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/baldosa5.png" id="baldosa5_3" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/baldosa5.png" id="baldosa5_4" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/baldosa5.png" id="baldosa5_5" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/baldosa5.png" id="baldosa5_6" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/baldosa5.png" id="baldosa5_7" class="draggable selectable" style="position: absolute;">
+    
+    <!-- 7 baldosas de 4 -->
+    
+    <img src="img/aos/baldosa4.png" id="baldosa4_1" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/baldosa4.png" id="baldosa4_2" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/baldosa4.png" id="baldosa4_3" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/baldosa4.png" id="baldosa4_4" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/baldosa4.png" id="baldosa4_5" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/baldosa4.png" id="baldosa4_6" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/baldosa4.png" id="baldosa4_7" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/baldosa4.png" id="baldosa4_8" class="draggable selectable" style="position: absolute;">
+    
+    <!-- Se ponen los 4 castillos -->
+    
+    <img src="img/aos/castillo1.png" id="castillo1" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/castillo2.png" id="castillo2" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/castillo3.png" id="castillo3" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/castillo4.png" id="castillo4" class="draggable selectable" style="position: absolute;">
+    
+    <!-- se ponen los 4 reyes -->
+    
+    <img src="img/aos/rey1.png" id="rey1" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/rey2.png" id="rey2" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/rey3.png" id="rey3" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/rey4.png" id="rey4" class="draggable selectable" style="position: absolute;">
+    
+    <!-- se ponen 5 constructores por jugador -->
+    
+    <img src="img/aos/constructor1.png" id="constructor1_1" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/constructor2.png" id="constructor2_1" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/constructor3.png" id="constructor3_1" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/constructor4.png" id="constructor4_1" class="draggable selectable" style="position: absolute;">
+    
+    <img src="img/aos/constructor1.png" id="constructor1_2" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/constructor2.png" id="constructor2_2" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/constructor3.png" id="constructor3_2" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/constructor4.png" id="constructor4_2" class="draggable selectable" style="position: absolute;">
+    
+    <img src="img/aos/constructor1.png" id="constructor1_3" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/constructor2.png" id="constructor2_3" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/constructor3.png" id="constructor3_3" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/constructor4.png" id="constructor4_3" class="draggable selectable" style="position: absolute;">
+    
+    <img src="img/aos/constructor1.png" id="constructor1_4" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/constructor2.png" id="constructor2_4" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/constructor3.png" id="constructor3_4" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/constructor4.png" id="constructor4_4" class="draggable selectable" style="position: absolute;">
+    
+    <img src="img/aos/constructor1.png" id="constructor1_5" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/constructor2.png" id="constructor2_5" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/constructor3.png" id="constructor3_5" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/constructor4.png" id="constructor4_5" class="draggable selectable" style="position: absolute;">
+    
+    <!-- se ponen 6 espadachines por jugador -->
+    
+    <img src="img/aos/espadachin1.png" id="espadachin1_1" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/espadachin2.png" id="espadachin2_1" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/espadachin3.png" id="espadachin3_1" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/espadachin4.png" id="espadachin4_1" class="draggable selectable" style="position: absolute;">
+    
+    <img src="img/aos/espadachin1.png" id="espadachin1_2" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/espadachin2.png" id="espadachin2_2" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/espadachin3.png" id="espadachin3_2" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/espadachin4.png" id="espadachin4_2" class="draggable selectable" style="position: absolute;">
+    
+    <img src="img/aos/espadachin1.png" id="espadachin1_3" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/espadachin2.png" id="espadachin2_3" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/espadachin3.png" id="espadachin3_3" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/espadachin4.png" id="espadachin4_3" class="draggable selectable" style="position: absolute;">
+    
+    <img src="img/aos/espadachin1.png" id="espadachin1_4" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/espadachin2.png" id="espadachin2_4" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/espadachin3.png" id="espadachin3_4" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/espadachin4.png" id="espadachin4_4" class="draggable selectable" style="position: absolute;">
+    
+    <img src="img/aos/espadachin1.png" id="espadachin1_5" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/espadachin2.png" id="espadachin2_5" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/espadachin3.png" id="espadachin3_5" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/espadachin4.png" id="espadachin4_5" class="draggable selectable" style="position: absolute;">
+    
+    <img src="img/aos/espadachin1.png" id="espadachin1_6" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/espadachin2.png" id="espadachin2_6" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/espadachin3.png" id="espadachin3_6" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/espadachin4.png" id="espadachin4_6" class="draggable selectable" style="position: absolute;">
+    
+    <!-- se ponen 4 arqueros por jugador -->
+    
+    <img src="img/aos/arquero1.png" id="arquero1_1" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/arquero2.png" id="arquero2_1" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/arquero3.png" id="arquero3_1" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/arquero4.png" id="arquero4_1" class="draggable selectable" style="position: absolute;">
+    
+    <img src="img/aos/arquero1.png" id="arquero1_2" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/arquero2.png" id="arquero2_2" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/arquero3.png" id="arquero3_2" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/arquero4.png" id="arquero4_2" class="draggable selectable" style="position: absolute;">
+    
+    <img src="img/aos/arquero1.png" id="arquero1_3" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/arquero2.png" id="arquero2_3" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/arquero3.png" id="arquero3_3" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/arquero4.png" id="arquero4_3" class="draggable selectable" style="position: absolute;">
+    
+    <img src="img/aos/arquero1.png" id="arquero1_4" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/arquero2.png" id="arquero2_4" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/arquero3.png" id="arquero3_4" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/arquero4.png" id="arquero4_4" class="draggable selectable" style="position: absolute;">
+    
+    <!-- se ponen 2 jinetes por jugador -->
+    
+    <img src="img/aos/jinete1.png" id="jinete1_1" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/jinete2.png" id="jinete2_1" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/jinete3.png" id="jinete3_1" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/jinete4.png" id="jinete4_1" class="draggable selectable" style="position: absolute;">
+    
+    <img src="img/aos/jinete1.png" id="jinete1_2" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/jinete2.png" id="jinete2_2" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/jinete3.png" id="jinete3_2" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/jinete4.png" id="jinete4_2" class="draggable selectable" style="position: absolute;">
+    
+    <!-- se ponen 3 granjas por jugador -->
+    
+    <img src="img/aos/granja1.png" id="granja1_1" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/granja2.png" id="granja2_1" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/granja3.png" id="granja3_1" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/granja4.png" id="granja4_1" class="draggable selectable" style="position: absolute;">
+    
+    <img src="img/aos/granja1.png" id="granja1_2" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/granja2.png" id="granja2_2" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/granja3.png" id="granja3_2" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/granja4.png" id="granja4_2" class="draggable selectable" style="position: absolute;">
+    
+    <img src="img/aos/granja1.png" id="granja1_3" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/granja2.png" id="granja2_3" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/granja3.png" id="granja3_3" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/granja4.png" id="granja4_3" class="draggable selectable" style="position: absolute;">
+    
+    <!-- se ponen 3 cuarteles por jugador -->
+    
+    <img src="img/aos/cuartel1.png" id="cuartel1_1" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/cuartel2.png" id="cuartel2_1" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/cuartel3.png" id="cuartel3_1" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/cuartel4.png" id="cuartel4_1" class="draggable selectable" style="position: absolute;">
+    
+    <img src="img/aos/cuartel1.png" id="cuartel1_2" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/cuartel2.png" id="cuartel2_2" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/cuartel3.png" id="cuartel3_2" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/cuartel4.png" id="cuartel4_2" class="draggable selectable" style="position: absolute;">
+    
+    <img src="img/aos/cuartel1.png" id="cuartel1_3" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/cuartel2.png" id="cuartel2_3" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/cuartel3.png" id="cuartel3_3" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/cuartel4.png" id="cuartel4_3" class="draggable selectable" style="position: absolute;">
+    
+    <!-- se ponen 1 tallerespada por jugador -->
+    
+    <img src="img/aos/tallerespada1.png" id="tallerespada1_1" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/tallerespada2.png" id="tallerespada2_1" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/tallerespada3.png" id="tallerespada3_1" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/tallerespada4.png" id="tallerespada4_1" class="draggable selectable" style="position: absolute;">
+    
+    <!-- se ponen 1 tallerarco por jugador -->
+    
+    <img src="img/aos/tallerarco1.png" id="tallerarco1_1" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/tallerarco2.png" id="tallerarco2_1" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/tallerarco3.png" id="tallerarco3_1" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/tallerarco4.png" id="tallerarco4_1" class="draggable selectable" style="position: absolute;">
+    
+    <!-- se ponen 1 tallerlanza por jugador -->
+    
+    <img src="img/aos/tallerlanza1.png" id="tallerlanza1_1" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/tallerlanza2.png" id="tallerlanza2_1" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/tallerlanza3.png" id="tallerlanza3_1" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/tallerlanza4.png" id="tallerlanza4_1" class="draggable selectable" style="position: absolute;">
+    
+    <!-- se ponen 1 tallerescudo por jugador -->
+    
+    <img src="img/aos/tallerescudo1.png" id="tallerescudo1_1" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/tallerescudo2.png" id="tallerescudo2_1" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/tallerescudo3.png" id="tallerescudo3_1" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/tallerescudo4.png" id="tallerescudo4_1" class="draggable selectable" style="position: absolute;">
+    
+    <!-- se ponen 1 restaurante por jugador -->
+    
+    <img src="img/aos/restaurante1.png" id="restaurante1_1" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/restaurante2.png" id="restaurante2_1" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/restaurante3.png" id="restaurante3_1" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/restaurante4.png" id="restaurante4_1" class="draggable selectable" style="position: absolute;">
+    
+    <!-- se ponen 1 establo por jugador -->
+    
+    <img src="img/aos/establo1.png" id="establo1_1" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/establo2.png" id="establo2_1" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/establo3.png" id="establo3_1" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/establo4.png" id="establo4_1" class="draggable selectable" style="position: absolute;">
+    
+    <!-- se ponen 1 estatua por jugador -->
+    
+    <img src="img/aos/estatua1.png" id="estatua1_1" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/estatua2.png" id="estatua2_1" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/estatua3.png" id="estatua3_1" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/estatua4.png" id="estatua4_1" class="draggable selectable" style="position: absolute;">
+    
+    <!-- se ponen 1 templo por jugador -->
+    
+    <img src="img/aos/templo1.png" id="templo1_1" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/templo2.png" id="templo2_1" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/templo3.png" id="templo3_1" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/templo4.png" id="templo4_1" class="draggable selectable" style="position: absolute;">
+    
+    <!-- se ponen 1 Orden de Paz por jugador -->
+    
+    <img src="img/aos/paz1.png" id="paz1_1" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/paz2.png" id="paz2_1" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/paz3.png" id="paz3_1" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/paz4.png" id="paz4_1" class="draggable selectable" style="position: absolute;">
+    
+    <!-- se ponen 2 catapultas por jugador -->
+    
+    <img src="img/aos/catapulta1.png" id="catapulta1_1" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/catapulta2.png" id="catapulta2_1" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/catapulta3.png" id="catapulta3_1" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/catapulta4.png" id="catapulta4_1" class="draggable selectable" style="position: absolute;">
+    
+    <!-- se ponen 1 torre por jugador -->
+    
+    <img src="img/aos/torre1.png" id="torre1_1" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/torre2.png" id="torre2_1" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/torre3.png" id="torre3_1" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/torre4.png" id="torre4_1" class="draggable selectable" style="position: absolute;">
+    
+    <!-- se ponen 1 concejo por jugador -->
+    
+    <img src="img/aos/tropa1.png" id="tropa1_1" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/tropa2.png" id="tropa2_1" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/tropa3.png" id="tropa3_1" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/tropa4.png" id="tropa4_1" class="draggable selectable" style="position: absolute;">
+    
+    <!-- se ponen 30 recursos para todos los jugadores -->
+    
+    <img src="img/aos/recurso.png" id="recurso_1" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/recurso.png" id="recurso_2" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/recurso.png" id="recurso_3" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/recurso.png" id="recurso_4" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/recurso.png" id="recurso_5" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/recurso.png" id="recurso_6" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/recurso.png" id="recurso_7" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/recurso.png" id="recurso_8" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/recurso.png" id="recurso_9" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/recurso.png" id="recurso_10" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/recurso.png" id="recurso_11" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/recurso.png" id="recurso_12" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/recurso.png" id="recurso_13" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/recurso.png" id="recurso_14" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/recurso.png" id="recurso_15" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/recurso.png" id="recurso_16" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/recurso.png" id="recurso_17" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/recurso.png" id="recurso_18" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/recurso.png" id="recurso_19" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/recurso.png" id="recurso_20" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/recurso.png" id="recurso_21" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/recurso.png" id="recurso_22" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/recurso.png" id="recurso_23" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/recurso.png" id="recurso_24" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/recurso.png" id="recurso_25" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/recurso.png" id="recurso_26" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/recurso.png" id="recurso_27" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/recurso.png" id="recurso_28" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/recurso.png" id="recurso_29" class="draggable selectable" style="position: absolute;">
+    <img src="img/aos/recurso.png" id="recurso_30" class="draggable selectable" style="position: absolute;">
+    
+    <table>
+      <tr><td><img src="img/rotate.svg" class="rotate-button"/></td></tr>
+      <tr><td><div class="white-die die-button" id="d1"></div></td></tr>
+      <tr><td><div class="black-die die-button" id="d2"></div></td></tr>
+      <tr><td><div class="white-eight-die die-button" id="d3"></div></td></tr>
+      <tr><td><div class="black-eight-die die-button" id="d4"></div></td></tr>
+      <!-- <tr><td><div class="refresh-button" id="d5">Refrescar</div></td></tr> -->
+    </table>
+    
+    <script type="text/javascript" src="js/board.js"></script>
+    
+  </body>
+</html>
