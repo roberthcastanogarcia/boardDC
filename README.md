@@ -1,5 +1,5 @@
 # boardDC
-Little handcrafted Boardgame framework
+Handcrafted Boardgame framework
 
 # Demo site
 
